@@ -11,8 +11,8 @@
 	at team@ushahidi.com.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.ec.ushahidi.android.app"
-    android:versionCode="40"
+    package="ec.desastre.android.app"
+    android:versionCode="2"
     android:versionName="1.0" >
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -27,10 +27,10 @@
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <permission
-        android:name="org.ec.ushahidi.android.app.permission.MAPS_RECEIVE"
+        android:name="ec.desastre.android.app.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="org.ec.ushahidi.android.app.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="ec.desastre.android.app.permission.MAPS_RECEIVE" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature
