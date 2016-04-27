@@ -28,6 +28,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.actionbarsherlock.view.Menu;
@@ -224,6 +225,10 @@ public abstract class BaseMapFragment extends SherlockMapFragment {
             // https://code.google.com/p/gmaps-api-issues/issues/detail?id=4650
             markersHolder.add(title);
 
+            if (anyDataNull(latLng, title, snippet)){
+            	Log.e("DATA ERROR", "latLng, title and snippet must not be null");
+            	return;
+            }
             if ((filename != null) && (!TextUtils.isEmpty(filename))) {
 
                 map.addMarker(new MarkerOptions().position(latLng)
@@ -236,7 +241,11 @@ public abstract class BaseMapFragment extends SherlockMapFragment {
 
         }
 
-        public void clearMapMarkers() {
+        private boolean anyDataNull(LatLng latLng, String title, String snippet) {
+			return latLng == null || title == null || snippet == null;
+		}
+
+		public void clearMapMarkers() {
             if (map != null && markersHolder != null) {
                 markersHolder.clear();
                 map.clear();
