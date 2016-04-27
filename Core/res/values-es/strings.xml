@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="txt_phonenumber">Número de teléfono celular/móvil</string>
   <string name="hint_phonenumber">Solamente para enviar un reporte.</string>
   <string name="total_reports">Cantidad de reportes</string>
@@ -231,5 +231,5 @@
   <!--Map tiles preferences-->
   <string name="map_tiles">Capas</string>
   <string name="map_tiles_summary">El proveedor de mapas para utilizar. Por defecto es Google</string>
-  <string name="title_template_step">Viendo &lt;xliff:g id="step_number"&gt;%1$d&lt;/xliff:g&gt; / &lt;xliff:g id="total_number"&gt;%2$d&lt;/xliff:g&gt;</string>
+  <string name="title_template_step">Viendo <xliff:g id="step_number">%1$d</xliff:g> / <xliff:g id="total_number">%2$d</xliff:g></string>
 </resources>
